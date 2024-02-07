@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Be My Valentine</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7e1eb;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('hearts-background.jpg'); /* Add a romantic background image */
+    background-size: cover;
+  }
+  .container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to the container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .question {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .chocolate {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  .heart {
+    color: #e63946;
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  .btn {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .btn-yes {
+    background-color: #33cc33;
+    margin-right: 10px;
+  }
+  .btn-no:hover {
+    transform: scale(1.1);
+  }
+</style>
+</head>
+<body>
+
+<audio autoplay loop>
+  <source src="background_music.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div class="container">
+  <div class="heart">&hearts;</div>
+  <div class="question">Will you be my Valentine?</div>
+  <img class="chocolate" src="im.gif" alt="Chocolate GIF">
+  <br>
+  <button class="btn btn-yes" onclick="thankYou()">Yes</button>
+  <button class="btn btn-no" onclick="makeBigger()">No</button>
+</div>
+
+<script>
+var scaleLevel = 1;
+
+function makeBigger() {
+  var btnYes = document.querySelector('.btn-yes');
+  scaleLevel += 0.1;
+  btnYes.style.transform = 'scale(' + scaleLevel + ')';
+}
+
+function thankYou() {
+  window.location.href = "https://dt01e.github.io/Quynhkhung/"; // Replace with your desired thank you page URL
+}
+</script>
+
+</body>
+</html>
+
